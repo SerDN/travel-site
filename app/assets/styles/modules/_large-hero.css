@@ -1,0 +1,60 @@
+.large-hero {
+    position: relative;
+    border-bottom: 10px solid $mainBlue;
+
+    &__image {
+        display: block; /* con esto quitamos el espacio blanco que aparecia al darle un border-bottom a .large-hero, ya que el navegador trata a los elementos inline como si fueran texto, por lo que siempre deja un espacio debajo de ellos, ya que algunas letras (g, y, etc) tienen una colita para abajo. Con display block tratará a la imagen como si fuera un div */
+    }
+
+    &__text-content { /* el &, aquí dentro, se compila como .large-hero */
+        position: absolute;
+
+        /* centramos el texto verticalmente */
+        top: 50%; /* 50% de la altura del padre desde arriba */
+        transform: translateY(-50%); /* necesitamos que suba un 50% del total de su propia altura */
+
+        /* centramos el texto horizontalmente */
+        left: 0;
+        width: 100%;
+        text-align: center;
+
+    }
+
+    &__title {
+        font-weight: 300;
+        color: $mainBlue;
+        font-size: 2.4rem; /* es mejor usar rem porque escala según el tamaño de fuente del html... por lo que también escala segun el tamaño de fuente configurado en el navegador del usuario */
+        margin: 0;
+
+        @mixin atSmall {
+            font-size: 4.8rem;
+        }
+
+
+    }
+
+    &__subtitle {
+        font-weight: 300;
+        color: $mainBlue;
+        font-size: 1.5rem;
+        margin: 0;
+
+        @mixin atSmall {
+            font-size: 2.9rem;
+        }
+    }
+
+    &__description {
+        color: #FFF;
+        font-size: 1.1rem;
+        font-weight: 100;
+        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+        max-width: 30rem; /* lo hacemos para que el texto ocupe 2 lineas. Pero al haberle puesto un ancho menos que el 100%, el text-align configurado arriba no funciona acá... por eso tenemos que usar margin: auto a los lados */
+        margin: 1.875rem auto;
+
+        @mixin atSmall {
+            font-size: 1.875rem;
+        }
+    }
+
+}

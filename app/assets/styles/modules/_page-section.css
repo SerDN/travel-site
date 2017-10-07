@@ -1,0 +1,14 @@
+.page-section { /* será responsable de darle un padding-top y padding-bottom a todas las secciones de la pagina */
+
+    padding: 1.2rem 0;
+
+    @mixin atMedium {
+        padding: 4.5rem 0; /* 72px de padding arriba y abajo, para resoluciones >= 800px */
+    }
+
+
+    &--blue {
+        background-color: $mainBlue;
+        color: #FFF;
+    }
+}
