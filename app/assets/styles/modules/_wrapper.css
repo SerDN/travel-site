@@ -1,5 +1,5 @@
 .wrapper { /* responsable de padding a los lados y de ser el contenedor para centrar el contenido, en la version de escritorio */
-
+    
     overflow: hidden;
 
     padding-left: 18px;
