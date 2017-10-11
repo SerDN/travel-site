@@ -4,7 +4,7 @@ var browserSync = require("browser-sync").create();
 
 gulp.task("watch", function(){
 
-    browserSync.init({ // creamos el servidor web
+    browserSync.init({
         notify: false,
         server: {
             baseDir: "app" // le pasamos la ruta del index.html

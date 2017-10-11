@@ -572,7 +572,7 @@ a {
     }
 
 .wrapper { /* responsable de padding a los lados y de ser el contenedor para centrar el contenido, en la version de escritorio */
-    
+
     overflow: hidden;
 
     padding-left: 18px;
@@ -686,14 +686,7 @@ a {
     }
 
 .row--gutters {
-        margin-right: -65px;
-        /*
-        con margen negativo hacemos que cresca hacia la derecha 65px, para compensar el padding de 65px de la columna de la derecha de todo. También es lo mismo usar:
-
-        width: calc(100% + 65px);
-        */
-
-
+        margin-right: -65px; /* con margen negativo hacemos que cresca hacia la derecha 65px, para compensar el padding de 65px de la columna de la derecha de todo */
     }
 
 .row--gutters > div { /* seleccionamos todos div que esten dentro de .row--gutters */
